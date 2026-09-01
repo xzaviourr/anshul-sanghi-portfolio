@@ -395,16 +395,6 @@ function App() {
             Software Engineer at <strong>Microsoft</strong>, agentic AI tinkerer, and systems nerd
             turning ambitious ideas into delightful, production-ready experiences.
           </p>
-          <div className="iit-credential">
-            <div className="iit-seal">
-              <img src="/iit-bombay-logo.svg" alt="" />
-            </div>
-            <div>
-              <span>Indian Institute of Technology Bombay</span>
-              <strong>M.Tech in Computer Science · CPI 8.81</strong>
-            </div>
-            <div className="iit-spark">✦</div>
-          </div>
           <div className="hero-actions">
             <a className="button button--dark" href="#projects">
               Explore my work <Icon name="arrow" />
@@ -582,17 +572,23 @@ function App() {
             <article>
               <div className="degree-year">2024</div>
               <div><span>M.Tech · Computer Science</span><h3>Indian Institute of Technology Bombay</h3><p>CPI 8.81 · GPU resource management & virtualization</p></div>
-              <strong>IITB</strong>
+              <div className="degree-logo">
+                <img src="/iit-bombay-logo.svg" alt="" />
+              </div>
             </article>
             <article>
               <div className="degree-year">2022</div>
               <div><span>B.Tech · Computer Science</span><h3>IIIT Gwalior</h3><p>CPI 8.42 · Healthcare AI capstone</p></div>
-              <strong>IIIT</strong>
+              <div className="degree-logo">
+                <img src="/iiit-gwalior-logo.png" alt="" />
+              </div>
             </article>
             <article>
               <div className="degree-year">2018</div>
               <div><span>CBSE · Intermediate</span><h3>Delhi Public School, Durg</h3><p>92.4%</p></div>
-              <strong>DPS</strong>
+              <div className="degree-logo degree-logo--dps">
+                <img src="/dps-durg-logo.png" alt="" />
+              </div>
             </article>
           </div>
         </div>

@@ -284,73 +284,6 @@ p {
   color: var(--ink);
 }
 
-.iit-credential {
-  position: relative;
-  width: fit-content;
-  display: grid;
-  grid-template-columns: 48px auto 24px;
-  gap: 13px;
-  align-items: center;
-  margin: -5px 0 29px;
-  padding: 10px 13px 10px 10px;
-  border: var(--line);
-  border-radius: 13px;
-  background: white;
-  box-shadow: 4px 4px 0 var(--blue);
-  transform: rotate(-1deg);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.iit-credential:hover {
-  box-shadow: 2px 2px 0 var(--blue);
-  transform: translate(2px, 2px) rotate(0);
-}
-
-.iit-seal {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  border: var(--line);
-  border-radius: 50%;
-  background: var(--yellow);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 800;
-  line-height: 0.85;
-  text-align: center;
-}
-
-.iit-seal img {
-  width: 37px;
-  height: 37px;
-  object-fit: contain;
-}
-
-.iit-credential div:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.iit-credential span {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.58rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.iit-credential strong {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.78rem;
-}
-
-.iit-spark {
-  color: var(--pink);
-  font-size: 1.1rem;
-  animation: spin 8s linear infinite;
-}
-
 .hero-actions {
   display: flex;
   align-items: center;
@@ -1648,9 +1581,9 @@ p {
 
 .degree-list article {
   display: grid;
-  grid-template-columns: 57px 1fr auto;
+  grid-template-columns: 57px minmax(0, 1fr) 76px;
   gap: 20px;
-  align-items: start;
+  align-items: center;
   padding: 24px 0;
   border-bottom: 1.5px solid var(--ink);
 }
@@ -1683,16 +1616,22 @@ p {
   font-size: 0.7rem;
 }
 
-.degree-list strong {
-  width: 45px;
-  height: 45px;
+.degree-logo {
+  width: 76px;
+  height: 76px;
   display: grid;
   place-items: center;
-  border: 1.5px solid var(--ink);
-  border-radius: 50%;
-  background: var(--yellow);
-  font-family: 'DM Mono', monospace;
-  font-size: 0.52rem;
+}
+
+.degree-logo img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.degree-logo--dps img {
+  width: 58px;
+  height: 72px;
 }
 
 .course-strip {
@@ -2341,24 +2280,6 @@ footer > a:not(.logo) {
     font-size: 0.96rem;
   }
 
-  .iit-credential {
-    width: 100%;
-    grid-template-columns: 44px 1fr 20px;
-  }
-
-  .iit-seal {
-    width: 44px;
-    height: 44px;
-  }
-
-  .iit-credential span {
-    font-size: 0.5rem;
-  }
-
-  .iit-credential strong {
-    font-size: 0.68rem;
-  }
-
   .hero-actions {
     align-items: flex-start;
     flex-direction: column;
@@ -2559,11 +2480,23 @@ footer > a:not(.logo) {
   }
 
   .degree-list article {
-    grid-template-columns: 46px 1fr;
+    grid-template-columns: 46px minmax(0, 1fr) 58px;
+    gap: 12px;
   }
 
-  .degree-list strong {
-    display: none;
+  .degree-logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .degree-logo img {
+    width: 54px;
+    height: 54px;
+  }
+
+  .degree-logo--dps img {
+    width: 44px;
+    height: 57px;
   }
 
   .course-strip {
