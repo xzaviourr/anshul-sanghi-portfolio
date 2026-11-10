@@ -1,0 +1,51 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "feature/kirti-corner": false
+    }
+  },
+  "redirects": [
+    { "source": "/wishboard", "destination": "/kirti", "permanent": true },
+    { "source": "/wishboard/", "destination": "/kirti", "permanent": true },
+    { "source": "/wishboard.html", "destination": "/kirti", "permanent": true },
+    { "source": "/wishboard/manage", "destination": "/kirti/manage", "permanent": true },
+    { "source": "/wishboard/manage/", "destination": "/kirti/manage", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/kirti/manage", "destination": "/kirti.html" },
+    { "source": "/kirti/manage/", "destination": "/kirti.html" },
+    { "source": "/kirti", "destination": "/kirti.html" },
+    { "source": "/kirti/", "destination": "/kirti.html" }
+  ],
+  "headers": [
+    {
+      "source": "/kirti/manage/:path*",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Referrer-Policy", "value": "no-referrer" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/kirti",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    },
+    {
+      "source": "/kirti/",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    },
+    {
+      "source": "/kirti.html",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Referrer-Policy", "value": "no-referrer" }
+      ]
+    }
+  ]
+}
